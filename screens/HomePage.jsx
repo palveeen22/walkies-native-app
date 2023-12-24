@@ -57,7 +57,7 @@ const CarouselParagraph = styled.Text`
 const TagContainer = styled.View`
   flex-direction: row;
   justify-content: start;
-  gap: 10px;
+  gap: 15px;
   align-items: start;
   width: 100%;
 `;
@@ -65,6 +65,7 @@ const TagContainer = styled.View`
 const CarouselTag = styled.View`
   background-color: #ff335f;
   border-radius: 40px;
+  padding-horizontal: 10px;
 `;
 
 const TagText = styled.Text`
@@ -95,6 +96,30 @@ const ContentUp = styled.View`
 
 const TextContent = styled.Text`
   color: #ffff;
+  font-size: 20px;
+`;
+
+const TextContainer = styled.View`
+  position: flex;
+  flex-direction: column;
+`;
+
+const RowContent = styled.View`
+  position: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+`;
+
+const TextRow = styled.View`
+  position: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+`;
+
+const TextP = styled.Text`
+  color: #fff;
 `;
 const HomePage = () => {
   return (
@@ -130,7 +155,19 @@ const HomePage = () => {
       <Content>
         <ContentUp>
           <Image />
-          <TextContent>test</TextContent>
+          <TextContainer>
+            <TextContent>Walking with Jonan</TextContent>
+            <RowContent>
+              <TextRow>
+                <Ionicons name="location-sharp" color="#fff" size={18} />
+                <TextP>1.3 KM</TextP>
+              </TextRow>
+              <TextRow>
+                <Ionicons name="star-sharp" color="#fff" size={18} />
+                <TextP>1.3 KM</TextP>
+              </TextRow>
+            </RowContent>
+          </TextContainer>
         </ContentUp>
       </Content>
 
