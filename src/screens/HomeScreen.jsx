@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, ScrollView, Text } from "react-native";
+import { FlatList, SafeAreaView, ScrollView, Text } from "react-native";
 import styled from "styled-components/native";
 import {
   MaterialCommunityIcons,
@@ -7,6 +7,13 @@ import {
   Octicons,
   MaterialIcons,
 } from "@expo/vector-icons";
+// import { DATA } from "../constants/constants";
+
+// const Item = ({ title }) => (
+//   <View style={styled.item}>
+//     <Text style={styled.title}>{title}</Text>
+//   </View>
+// );
 
 const Container = styled.View`
   flex: 1;
@@ -148,7 +155,7 @@ const HomeScreen = () => {
               <ContainerInput>
                 <Tag>
                   <MaterialIcons name="pets" color="#ffff" size={25} />
-                  <Text style={{ color: "#fff" }}>Pet Food</Text>
+                  {/* <Text style={{ color: "#fff" }}>Pet Food</Text> */}
                 </Tag>
               </ContainerInput>
             </Card>

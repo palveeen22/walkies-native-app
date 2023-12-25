@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text } from "react-native";
+import { SafeAreaView, Text, FlatList } from "react-native";
 import styled from "styled-components/native";
 import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import Image from "../assets/contentMain";
