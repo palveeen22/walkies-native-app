@@ -1,13 +1,13 @@
 import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import styled from "styled-components/native";
-import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import Image from "../assets/contentMain";
 
 //style
 
 const ContainerMenu = styled.View`
-  padding-vertical: 40px;
+  /* padding-top: 40px; */
 `;
 
 const MenuBox = styled.View`
@@ -52,13 +52,14 @@ const Reklama = styled.View`
   background-color: #ff335f;
   margin-top: 30px;
   border-radius: 20px;
-  height: 80px;
+  height: 90px;
   padding: 20px;
 `;
 
 const ReklamaText = styled.Text`
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 `;
 
 const KeyboardAvoidingView = styled.KeyboardAvoidingView`
@@ -75,8 +76,16 @@ const HomeCard = () => {
             <Ionicons name="search" color="#ff335f" size={25} />
           </FormInput>
           <Reklama>
-            <ReklamaText>Free shiping on first order</ReklamaText>
-            <Image />
+            <ReklamaText>
+              Free service on first {"\n"}
+              subscription
+            </ReklamaText>
+            <MaterialCommunityIcons
+              name="dog-service"
+              color="#ffff"
+              size={55}
+            />
+            {/* <Image /> */}
           </Reklama>
           {/* <Text>tyesx</Text> */}
         </KeyboardAvoidingView>
