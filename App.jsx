@@ -1,19 +1,32 @@
 import { NavigationContainer } from "@react-navigation/native";
-import LoginScreen from "./screens/LoginScreen";
-import MainPage from "./screens/MainPage";
-import TestBox from "./screens/TestBox";
-import RegisterScreen from "./screens/RegisterScreen";
-import HomePage from "./screens/HomePage";
+import { TouchableOpacity } from "react-native";
+import StackHolder from "./src/stacks/StackHolder";
 
 export default function App() {
   return (
     <>
       <NavigationContainer>
-        {/* <MainPage /> */}
-        {/* <LoginScreen /> */}
-        {/* <RegisterScreen /> */}
-        <HomePage />
+        <StackHolder />
       </NavigationContainer>
     </>
   );
+}
+
+{
+  /* <TouchableOpacity> */
+}
+{
+  /* <MainPage /> */
+}
+{
+  /* <LoginScreen /> */
+}
+{
+  /* <RegisterScreen /> */
+}
+{
+  /* <HomePage /> */
+}
+{
+  /* </TouchableOpacity> */
 }

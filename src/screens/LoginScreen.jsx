@@ -124,7 +124,11 @@ const LoginScreen = ({ navigation }) => {
               // value={password}
               secureTextEntry
             />
-            <SignInButton onPress={pressLogin}>
+            <SignInButton
+              onPress={() => {
+                navigation.navigate("Home");
+              }}
+            >
               <TextButton>Signed In</TextButton>
             </SignInButton>
           </FormContainer>

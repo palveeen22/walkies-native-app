@@ -93,7 +93,7 @@ const TouchButton = styled.TouchableOpacity`
   align-items: center;
 `;
 
-const RegisterScreen = () => {
+const RegisterScreen = ({ navigation }) => {
   return (
     <Container>
       {/* header  */}
@@ -107,7 +107,8 @@ const RegisterScreen = () => {
       {/* form */}
       <KeyboardAvoidingView behavior="padding">
         <FormContainer>
-          <TextInput placeholder="vlad@mail.ru" />
+          <TextInput placeholder="username123" />
+          <TextInput placeholder="your_email@mail.ru" />
           <TextInput
             placeholder="input your password"
             textContentType="password"
@@ -125,9 +126,9 @@ const RegisterScreen = () => {
       <ContainerFooter>
         <TextFooter>I already have an account</TextFooter>
         <TouchButton
-        //   onPress={() => {
-        //     navigation.navigate("Register");
-        //   }}
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
         >
           <TextFooter style={{ marginTop: 3, textDecorationLine: "underline" }}>
             Signed in

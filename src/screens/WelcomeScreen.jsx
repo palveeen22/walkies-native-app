@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components/native";
-import SvgType from "react-native-svg";
-import test from "../assets/2.svg";
-import { SafeAreaView } from "react-native-safe-area-context";
+// import SvgType from "react-native-svg";
+// import test from "../assets/2.svg";
+// import { SafeAreaView } from "react-native-safe-area-context";
 import { AntDesign } from "@expo/vector-icons";
-import { SvgUri } from "react-native-svg";
+// import { SvgUri } from "react-native-svg";
 import MainImage from "../assets/mainImage";
 
 const Container = styled.View`
@@ -53,7 +53,7 @@ const ButtonText = styled.Text`
   margin-right: 10px;
 `;
 
-const MainPage = () => {
+const WelcomeScreen = ({ navigation }) => {
   return (
     <Container>
       {/* <SvgUri source={test} width="400" /> */}
@@ -64,16 +64,19 @@ const MainPage = () => {
           Walking, babysitting and overstaying dogs in Jakarta
         </Paragraph>
       </Box>
-      <ButtonNext
-        onPress={() => {
-          navigation.navigate("LoginScreen");
-        }}
-      >
+      <ButtonNext>
         <ButtonText>Let's Start</ButtonText>
-        <AntDesign name="arrowright" size={20} color="#ff335f" />
+        <AntDesign
+          name="arrowright"
+          size={20}
+          color="#ff335f"
+          onPress={() => {
+            navigation.navigate("Login");
+          }}
+        />
       </ButtonNext>
     </Container>
   );
 };
 
-export default MainPage;
+export default WelcomeScreen;
