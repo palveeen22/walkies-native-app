@@ -36,18 +36,20 @@ const Paragraph = styled.Text`
   font-weight: 300;
 `;
 
-const ButtonNext = styled.View`
+const ButtonNext = styled.TouchableOpacity`
   flex-direction: row;
   background-color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  width: 90%;
   padding-horizontal: 20px;
 `;
 
 const ButtonText = styled.Text`
   color: #ff335f;
+  font-weight: 500;
   text-align: center;
   padding: 15px;
   margin-right: 10px;
@@ -61,19 +63,23 @@ const WelcomeScreen = ({ navigation }) => {
       <Box>
         <TextH1>Walkies</TextH1>
         <Paragraph>
-          Walking, babysitting and overstaying dogs in Jakarta
+          Walking, babysitting and overstaying pets in Jakarta
         </Paragraph>
       </Box>
-      <ButtonNext>
-        <ButtonText>Let's Start</ButtonText>
-        <AntDesign
+      <ButtonNext
+        onPress={() => {
+          navigation.navigate("Login");
+        }}
+      >
+        <ButtonText>Get Started</ButtonText>
+        {/* <AntDesign
           name="arrowright"
           size={20}
           color="#ff335f"
           onPress={() => {
             navigation.navigate("Login");
           }}
-        />
+        /> */}
       </ButtonNext>
     </Container>
   );

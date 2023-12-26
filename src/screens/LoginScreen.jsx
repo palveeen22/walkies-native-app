@@ -116,7 +116,7 @@ const LoginScreen = ({ navigation }) => {
         {/* Form */}
         <KeyboardAvoidingView behavior="padding">
           <FormContainer>
-            <TextInput placeholder="vlad@mail.ru" />
+            <TextInput placeholder="your_email@mail.ru" />
             <TextInput
               placeholder="input your password"
               textContentType="password"

@@ -5,6 +5,7 @@ import {
   MaterialCommunityIcons,
   Ionicons,
   Octicons,
+  Foundation,
   MaterialIcons,
 } from "@expo/vector-icons";
 
@@ -12,90 +13,85 @@ const Container = styled.View`
   flex: 1;
   flex-direction: column;
   gap: 40px;
-  background-color: #e6e7e1;
+  padding-horizontal: 18px;
+  background-color: #fff;
 `;
 
 const ContainerHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-horizontal: 18px;
 `;
 
-const Location = styled.View`
-  flex-direction: row;
-  align-items: center;
+const HeaderLeft = styled.View`
+  flex-direction: column;
+  justify-content: space-between;
   gap: 5px;
 `;
 
 const Title = styled.Text`
-  color: #000000;
-  font-weight: 300;
-  font-size: 15px;
+  color: #404040;
+  font-weight: 700;
+  font-size: 20px;
 `;
 
-const CardContainer = styled.View`
-  padding-top: 20px;
-  /* border: 1px; */
+const TextSmall = styled.Text`
+  color: #a6a6a6;
+  font-weight: 600;
+  font-size: 12px;
 `;
 
-const Card = styled.View`
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-`;
-
-const ContainerInput = styled.View`
-  position: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5px;
-`;
-
-const SearchInput = styled.TextInput`
-  color: #ff335f;
-  background-color: #e6e7e1;
-  font-size: 28px;
-  height: 40px;
-  width: 85%;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 20px;
-  text-align: start;
-`;
-
-const Reklama = styled.View`
-  position: flex;
+const ContainerCard = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #ff335f;
   margin-top: 30px;
-  border-radius: 20px;
-  height: 90px;
-  padding: 20px;
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
 `;
 
-const ReklamaText = styled.Text`
+const LeftCard = styled.View`
+  width: 70%;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const CardTitle = styled.Text`
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 `;
 
-const TitleCard = styled.Text`
-  color: #000;
-  font-size: 30px;
-  font-weight: 500;
+const ButtonCard = styled.TouchableOpacity`
+  background-color: #fff;
+  width: 60%;
+  padding: 5px;
+  border-radius: 15px;
 `;
 
-const Tag = styled.View`
-  background-color: #ff335f;
-  position: flex;
+const ContainerService = styled.View`
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 15px;
+`;
+
+const ServiceCardContainer1 = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const ServiceCardContainer2 = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+`;
+
+const CardService = styled.View`
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
-  padding: 5px;
 `;
 
 const HomeScreen = () => {
@@ -103,98 +99,68 @@ const HomeScreen = () => {
     <Container>
       <SafeAreaView>
         <ScrollView>
-          {/* up content */}
+          {/* Bagian atas */}
           <ContainerHeader>
-            <Ionicons name="person" color="#ff335f" size={25} />
-            <Location>
-              <Ionicons name="location-sharp" color="#FFAC1C" size={18} />
-              <Title>12 Oak Street</Title>
-              <Ionicons name="chevron-down" color="#7F8C8D" size={25} />
-            </Location>
+            <HeaderLeft>
+              <Title>Hi, Momon!</Title>
+              <TextSmall>How are you Today?</TextSmall>
+            </HeaderLeft>
             <Ionicons name="notifications-outline" color="#ff335f" size={25} />
           </ContainerHeader>
+          {/* Bagian kedua */}
+          <ContainerCard>
+            <LeftCard>
+              <CardTitle>Book and schedule for your pets</CardTitle>
+              <ButtonCard>
+                <Text
+                  style={{
+                    textAlign: "center",
+                    color: "#ff335f",
+                  }}
+                >
+                  Find Nerby
+                </Text>
+              </ButtonCard>
+            </LeftCard>
+            <MaterialCommunityIcons name="dog" color="#fff" size={80} />
+          </ContainerCard>
+          {/* Bagian kedua */}
+          <ContainerService>
+            <ServiceCardContainer1>
+              <Title>Our Services</Title>
+              <TextSmall>See All</TextSmall>
+            </ServiceCardContainer1>
+            {/* Bagian kedua card */}
+            <ServiceCardContainer2>
+              <CardService>
+                <Foundation name="guide-dog" color="#ff335f" size={40} />
+                <TextSmall>Pets Walking</TextSmall>
+              </CardService>
 
-          {/* second content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
+              <CardService>
                 <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
+                  name="bathtub-outline"
+                  color="#ff335f"
+                  size={40}
                 />
-              </Reklama>
-            </Card>
-          </CardContainer>
+                <TextSmall>Pets Care</TextSmall>
+              </CardService>
 
-          {/* third content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <TitleCard>Popular</TitleCard>
-                <ContainerInput>
-                  <Text style={{ color: "#595959" }}>See All</Text>
-                  <Octicons name="arrow-right" color="#595959" size={15} />
-                </ContainerInput>
-              </ContainerInput>
-              <ContainerInput>
-                <Tag>
-                  <MaterialIcons name="pets" color="#ffff" size={25} />
-                  {/* <Text style={{ color: "#fff" }}>Pet Food</Text> */}
-                </Tag>
-              </ContainerInput>
-            </Card>
-          </CardContainer>
+              <CardService>
+                <MaterialIcons name="child-care" color="#ff335f" size={40} />
+                <TextSmall>Pets sitter</TextSmall>
+              </CardService>
 
-          {/* four content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
+              <CardService>
                 <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
+                  name="hoop-house"
+                  color="#ff335f"
+                  size={40}
                 />
-              </Reklama>
-            </Card>
-          </CardContainer>
-
-          {/* five content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
-                <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
-                />
-              </Reklama>
-            </Card>
-          </CardContainer>
+                <TextSmall>overstaying</TextSmall>
+              </CardService>
+            </ServiceCardContainer2>
+          </ContainerService>
         </ScrollView>
       </SafeAreaView>
     </Container>

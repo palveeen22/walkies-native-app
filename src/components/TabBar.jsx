@@ -10,9 +10,6 @@ import HomeScreen from "../screens/HomeScreen";
 import Flex from "../screens/Flex";
 import TestBox from "../screens/TestBox";
 
-// import HomeStack from "../stacks/HomeStack";
-// import MessageScreen from "../screens/MessageScreen";
-
 const Tab = createBottomTabNavigator();
 
 const TabBar = () => {
@@ -51,7 +48,6 @@ const TabBar = () => {
           headerShown: false,
         }}
       />
-      {/* <Tab.Screen name="Home" component={HomeScreen}/> */}
     </Tab.Navigator>
   );
 };
