@@ -4,6 +4,7 @@ import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import WelcomeScreen from "../screens/WelcomeScreen";
 import HomeScreen from "../screens/HomeScreen";
+import TabBar from "../components/TabBar";
 
 const StackHolder = () => {
   //   const { isSignedIn } = useContext(AuthContext);
@@ -49,7 +50,7 @@ const StackHolder = () => {
         />
         <Stack.Screen
           name="Home"
-          component={HomeScreen}
+          component={TabBar}
           options={{ headerShown: false }}
         />
       </>

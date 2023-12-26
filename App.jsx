@@ -11,22 +11,3 @@ export default function App() {
     </>
   );
 }
-
-{
-  /* <TouchableOpacity> */
-}
-{
-  /* <MainPage /> */
-}
-{
-  /* <LoginScreen /> */
-}
-{
-  /* <RegisterScreen /> */
-}
-{
-  /* <HomePage /> */
-}
-{
-  /* </TouchableOpacity> */
-}

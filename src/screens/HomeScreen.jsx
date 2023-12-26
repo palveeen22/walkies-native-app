@@ -7,13 +7,8 @@ import {
   Octicons,
   MaterialIcons,
 } from "@expo/vector-icons";
-// import { DATA } from "../constants/constants";
-
-// const Item = ({ title }) => (
-//   <View style={styled.item}>
-//     <Text style={styled.title}>{title}</Text>
-//   </View>
-// );
+import MyDrawer from "../stacks/MyDrawer";
+import TabBar from "../components/TabBar";
 
 const Container = styled.View`
   flex: 1;
@@ -108,102 +103,102 @@ const Tag = styled.View`
 const HomeScreen = () => {
   return (
     <Container>
-      <SafeAreaView>
-        <ScrollView>
-          {/* up content */}
-          <ContainerHeader>
-            <Ionicons name="person" color="#ff335f" size={25} />
-            <Location>
-              <Ionicons name="location-sharp" color="#FFAC1C" size={18} />
-              <Title>12 Oak Street</Title>
-              <Ionicons name="chevron-down" color="#7F8C8D" size={25} />
-            </Location>
-            <Ionicons name="notifications-outline" color="#ff335f" size={25} />
-          </ContainerHeader>
+      {/* <SafeAreaView> */}
+      <ScrollView>
+        {/* up content */}
+        <ContainerHeader>
+          <Ionicons name="person" color="#ff335f" size={25} />
+          <Location>
+            <Ionicons name="location-sharp" color="#FFAC1C" size={18} />
+            <Title>12 Oak Street</Title>
+            <Ionicons name="chevron-down" color="#7F8C8D" size={25} />
+          </Location>
+          <Ionicons name="notifications-outline" color="#ff335f" size={25} />
+        </ContainerHeader>
 
-          {/* second content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
-                <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
-                />
-              </Reklama>
-            </Card>
-          </CardContainer>
+        {/* second content */}
+        <CardContainer>
+          <Card>
+            <ContainerInput>
+              <SearchInput placeholder="find here.." />
+              <Ionicons name="search" color="#ff335f" size={25} />
+            </ContainerInput>
+            <Reklama>
+              <ReklamaText>
+                Free service on first {"\n"}
+                subscription
+              </ReklamaText>
+              <MaterialCommunityIcons
+                name="dog-service"
+                color="#ffff"
+                size={55}
+              />
+            </Reklama>
+          </Card>
+        </CardContainer>
 
-          {/* third content */}
-          <CardContainer>
-            <Card>
+        {/* third content */}
+        <CardContainer>
+          <Card>
+            <ContainerInput>
+              <TitleCard>Popular</TitleCard>
               <ContainerInput>
-                <TitleCard>Popular</TitleCard>
-                <ContainerInput>
-                  <Text style={{ color: "#595959" }}>See All</Text>
-                  <Octicons name="arrow-right" color="#595959" size={15} />
-                </ContainerInput>
+                <Text style={{ color: "#595959" }}>See All</Text>
+                <Octicons name="arrow-right" color="#595959" size={15} />
               </ContainerInput>
-              <ContainerInput>
-                <Tag>
-                  <MaterialIcons name="pets" color="#ffff" size={25} />
-                  {/* <Text style={{ color: "#fff" }}>Pet Food</Text> */}
-                </Tag>
-              </ContainerInput>
-            </Card>
-          </CardContainer>
+            </ContainerInput>
+            <ContainerInput>
+              <Tag>
+                <MaterialIcons name="pets" color="#ffff" size={25} />
+                {/* <Text style={{ color: "#fff" }}>Pet Food</Text> */}
+              </Tag>
+            </ContainerInput>
+          </Card>
+        </CardContainer>
 
-          {/* four content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
-                <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
-                />
-              </Reklama>
-            </Card>
-          </CardContainer>
+        {/* four content */}
+        <CardContainer>
+          <Card>
+            <ContainerInput>
+              <SearchInput placeholder="find here.." />
+              <Ionicons name="search" color="#ff335f" size={25} />
+            </ContainerInput>
+            <Reklama>
+              <ReklamaText>
+                Free service on first {"\n"}
+                subscription
+              </ReklamaText>
+              <MaterialCommunityIcons
+                name="dog-service"
+                color="#ffff"
+                size={55}
+              />
+            </Reklama>
+          </Card>
+        </CardContainer>
 
-          {/* five content */}
-          <CardContainer>
-            <Card>
-              <ContainerInput>
-                <SearchInput placeholder="find here.." />
-                <Ionicons name="search" color="#ff335f" size={25} />
-              </ContainerInput>
-              <Reklama>
-                <ReklamaText>
-                  Free service on first {"\n"}
-                  subscription
-                </ReklamaText>
-                <MaterialCommunityIcons
-                  name="dog-service"
-                  color="#ffff"
-                  size={55}
-                />
-              </Reklama>
-            </Card>
-          </CardContainer>
-        </ScrollView>
-      </SafeAreaView>
+        {/* five content */}
+        <CardContainer>
+          <Card>
+            <ContainerInput>
+              <SearchInput placeholder="find here.." />
+              <Ionicons name="search" color="#ff335f" size={25} />
+            </ContainerInput>
+            <Reklama>
+              <ReklamaText>
+                Free service on first {"\n"}
+                subscription
+              </ReklamaText>
+              <MaterialCommunityIcons
+                name="dog-service"
+                color="#ffff"
+                size={55}
+              />
+            </Reklama>
+          </Card>
+        </CardContainer>
+      </ScrollView>
+      {/* </SafeAreaView> */}
     </Container>
   );
 };
