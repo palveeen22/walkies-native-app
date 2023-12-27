@@ -10,6 +10,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen";
 import Flex from "../screens/Flex";
 import TestBox from "../screens/TestBox";
+import ProfileScreen from "../screens/ProfileScreen";
+import ScheduleScreen from "../screens/ScheduleScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -50,7 +52,7 @@ const TabBar = () => {
       />
       <Tab.Screen
         name="Schedule"
-        component={Flex}
+        component={ScheduleScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => {
             const iconName = focused ? "calendar-outline" : "calendar-outline";
@@ -61,7 +63,7 @@ const TabBar = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={Flex}
+        component={ProfileScreen}
         options={{
           tabBarIcon: ({ focused, color, size }) => {
             const imageSource = focused
