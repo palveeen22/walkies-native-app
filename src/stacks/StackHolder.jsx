@@ -4,7 +4,7 @@ import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
 import WelcomeScreen from "../screens/WelcomeScreen";
 // import HomeScreen from "../screens/HomeScreen";
-import TabBar from "../components/TabBar";
+import TabBar from "./TabBar";
 
 const StackHolder = () => {
   //   const { isSignedIn } = useContext(AuthContext);

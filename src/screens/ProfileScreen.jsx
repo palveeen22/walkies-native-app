@@ -8,6 +8,7 @@ import {
   FontAwesome6,
   Feather,
 } from "@expo/vector-icons";
+import IconProfile from "../components/IconProfile";
 
 const Container = styled.View`
   flex: 1;
@@ -138,7 +139,7 @@ const ProfileScreen = ({ navigation }) => {
             </ImageService>
             <ContentImage>
               <Title>Jenny Doe</Title>
-              <TextSmall>Jakarta, Indonesia</TextSmall>
+              {/* <TextSmall>Jakarta, Indonesia</TextSmall> */}
               <ButtonCard>
                 <Text style={{ fontSize: 15, textAlign: "center" }}>
                   Edit Profile
@@ -149,82 +150,7 @@ const ProfileScreen = ({ navigation }) => {
         </ProfileCenter>
 
         {/* Bagian ketiga */}
-        <ProfileHeader>
-          <Text style={{ fontSize: 17, textAlign: "center", color: "#a6a6a6" }}>
-            My Orders
-          </Text>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 5,
-            }}
-          >
-            <Text
-              style={{ fontSize: 15, textAlign: "center", color: "#a6a6a6" }}
-            >
-              View All my orders
-            </Text>
-            <AntDesign name="right" color={"#a6a6a6"} />
-          </View>
-        </ProfileHeader>
-        <CardService>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 10,
-            }}
-          >
-            <Ionicons name="wallet-outline" size={30} />
-            <Text style={{ fontSize: 15, textAlign: "center" }}>To Pay</Text>
-          </View>
-          <AntDesign name="right" size={15} />
-        </CardService>
-        <CardService>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 10,
-            }}
-          >
-            <MaterialIcons name="local-shipping" size={30} />
-            <Text style={{ fontSize: 15, textAlign: "center" }}>To Ship</Text>
-          </View>
-          <AntDesign name="right" size={15} />
-        </CardService>
-        <CardService>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 10,
-            }}
-          >
-            <Ionicons name="checkbox-outline" size={30} />
-            <Text style={{ fontSize: 15, textAlign: "center" }}>To Recive</Text>
-          </View>
-          <AntDesign name="right" size={15} />
-        </CardService>
-        <CardService>
-          <View
-            style={{
-              flexDirection: "row",
-              justifyContent: "center",
-              alignItems: "center",
-              gap: 10,
-            }}
-          >
-            <MaterialIcons name="favorite-outline" size={30} />
-            <Text style={{ fontSize: 15, textAlign: "center" }}>Wishlist</Text>
-          </View>
-          <AntDesign name="right" size={15} />
-        </CardService>
+        <IconProfile />
 
         {/* Bagian map */}
         <ProfileDown>
@@ -259,7 +185,7 @@ const ProfileScreen = ({ navigation }) => {
             navigation.navigate("Login");
           }}
         >
-          <ButtonText>Get Started</ButtonText>
+          <ButtonText>Log Out</ButtonText>
         </ButtonNext>
       </SafeAreaView>
     </Container>

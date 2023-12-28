@@ -3,9 +3,10 @@ import styled from "styled-components/native";
 // import SvgType from "react-native-svg";
 // import test from "../assets/2.svg";
 // import { SafeAreaView } from "react-native-safe-area-context";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 // import { SvgUri } from "react-native-svg";
 import MainImage from "../assets/mainImage";
+import { Image } from "react-native";
 
 const Container = styled.View`
   flex: 1;
@@ -60,6 +61,13 @@ const WelcomeScreen = ({ navigation }) => {
     <Container>
       {/* <SvgUri source={test} width="400" /> */}
       <MainImage />
+      {/* <MaterialIcons name="pets" color="#fff" size={70} /> */}
+      {/* <Image
+        source={{
+          uri: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        }}
+        style={{ width: "80%", height: "50%", resizeMode: "contain" }}
+      /> */}
       <Box>
         <TextH1>Walkies</TextH1>
         <Paragraph>
