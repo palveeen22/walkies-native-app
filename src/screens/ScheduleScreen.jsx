@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import CalendarPicker from "react-native-calendar-picker";
+import styled from "styled-components/native";
+import { dateFormat } from "../helpers/helper";
+
+const Container = styled.View`
+  flex: 1;
+  flex-direction: column;
+  gap: 40px;
+  padding-horizontal: 18px;
+  background-color: #fff;
+`;
 
 const ScheduleScreen = () => {
   const [selectedStartDate, setSelectedStartDate] = useState(null);
@@ -12,13 +22,15 @@ const ScheduleScreen = () => {
   const startDate = selectedStartDate ? selectedStartDate.toString() : "";
 
   return (
-    <View style={styles.container}>
-      <CalendarPicker onDateChange={onDateChange} />
+    <Container>
+      <View style={styles.container}>
+        <CalendarPicker onDateChange={onDateChange} />
 
-      <View>
-        <Text>SELECTED DATE: {startDate}</Text>
+        <View>
+          <Text>SELECTED DATE: {startDate}</Text>
+        </View>
       </View>
-    </View>
+    </Container>
   );
 };
 

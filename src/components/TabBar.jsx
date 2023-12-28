@@ -76,7 +76,12 @@ const TabBar = () => {
             return (
               <Image
                 source={imageSource}
-                style={{ width: 24, height: 24, borderRadius: 50 }}
+                style={{
+                  width: 24,
+                  height: 24,
+                  borderRadius: 50,
+                  resizeMode: "cover",
+                }}
               />
             );
           },
