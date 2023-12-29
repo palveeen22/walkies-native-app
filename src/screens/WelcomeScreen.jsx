@@ -6,14 +6,14 @@ import styled from "styled-components/native";
 import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 // import { SvgUri } from "react-native-svg";
 import MainImage from "../assets/mainImage";
-import { Image } from "react-native";
+import { Image, View } from "react-native";
 
 const Container = styled.View`
   flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #ff335f;
+  background-color: #fff;
   padding: 5px;
 `;
 
@@ -24,13 +24,13 @@ const Box = styled.View`
 `;
 
 const TextH1 = styled.Text`
-  color: #fff;
+  color: #ff335f;
   font-size: 40px;
   font-weight: bold;
 `;
 
 const Paragraph = styled.Text`
-  color: #ffffff;
+  color: #ff335f;
   padding: 10px;
   text-align: center;
   font-size: 20px;
@@ -39,7 +39,7 @@ const Paragraph = styled.Text`
 
 const ButtonNext = styled.TouchableOpacity`
   flex-direction: row;
-  background-color: #fff;
+  background-color: #ff335f;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -49,7 +49,7 @@ const ButtonNext = styled.TouchableOpacity`
 `;
 
 const ButtonText = styled.Text`
-  color: #ff335f;
+  color: #fff;
   font-weight: 500;
   text-align: center;
   padding: 15px;
@@ -60,13 +60,18 @@ const WelcomeScreen = ({ navigation }) => {
   return (
     <Container>
       {/* <SvgUri source={test} width="400" /> */}
-      <MainImage />
+      {/* <MainImage /> */}
       {/* <MaterialIcons name="pets" color="#fff" size={70} /> */}
+      <Image
+        source={require("../assets/3.jpg")}
+        style={{ width: 400, height: 400 }}
+      />
       {/* <Image
-        source={{
-          uri: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        }}
-        style={{ width: "80%", height: "50%", resizeMode: "contain" }}
+      source=
+      {{
+        uri: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=2688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      }}
+      style={{ width: "80%", height: "50%", resizeMode: "contain" }}
       /> */}
       <Box>
         <TextH1>Walkies</TextH1>
